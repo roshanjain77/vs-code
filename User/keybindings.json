@@ -1,0 +1,35 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+alt+n",
+        "command": "extension.CompileRun"
+    },
+    {
+        "key": "f6",
+        "command": "-extension.CompileRun"
+    },
+    {
+        "key": "alt+.",
+        "command": "code-runner.run"
+    },
+    {
+        "key": "ctrl+alt+n",
+        "command": "-code-runner.run"
+    },
+    {
+        "key": "alt+,",
+        "command": "code-runner.stop"
+    },
+    {
+        "key": "ctrl+alt+m",
+        "command": "-code-runner.stop"
+    },
+    {
+      "key": "ctrl+t",
+      "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+      "key": "ctrl+n",
+      "command": "-workbench.action.files.newUntitledFile"
+    }
+]

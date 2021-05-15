@@ -1,0 +1,195 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+  // }
+  "c++ for loop": {
+    "prefix": "forc",
+    "body": [
+      "${1:i}=${2:0}",
+      "while ${1:i} < ${3:b}:",
+      "  ${1:i} += ${4:1}"
+    ],
+    "description": "c++ for loop"
+  },
+  "start": {
+    "prefix": "start",
+    "body": [
+      "def main():",
+      "  tc = 1",
+      "  tc = int(input())",
+      "  for i in range(tc):",
+      "    solve()",
+      "",
+      "def solve():",
+      "  ",
+      "",
+      "main()"
+    ],
+    "description": "start"
+  },
+  "input split": {
+    "prefix": "input",
+    "body": [
+      "list(map(int, input().split()))"
+    ],
+    "description": "input split"
+  },
+  "maximum priority queue": {
+    "prefix": "maxpq",
+    "body": [
+      "class maxpq:",
+      "  def __init__(self):",
+      "    self.l = [0]",
+      "    self.len = 0",
+      "",
+      "  def isempty(self):",
+      "    return self.len == 0",
+      "",
+      "  def swap(self,i,j):",
+      "    self.l[i] , self.l[j] = self.l[j] , self.l[i]",
+      "",
+      "  def swim(self,k):",
+      "    while k > 1 and self.l[k] > self.l[k//2]:",
+      "      self.swap(k,k//2)",
+      "      k = k//2",
+      "  ",
+      "  def sink(self,k):",
+      "    while 2*k <= self.len:",
+      "      j = 2*k",
+      "      if j < self.len and self.l[j+1] > self.l[j]:",
+      "        j += 1",
+      "      if self.l[k] < self.l[j]:",
+      "        self.swap(k,j)",
+      "      k = j",
+      "",
+      "  def push(self,val):",
+      "    self.l.append(val)",
+      "    self.len += 1",
+      "    self.swim(self.len)",
+      "",
+      "  def pop(self):",
+      "    if self.len:",
+      "      self.swap(1,self.len)",
+      "      val = self.l.pop()",
+      "      self.len -= 1",
+      "      self.sink(1)",
+      "      return val",
+      "    else:",
+      "      raise",
+      "",
+      "  def top(self):",
+      "    return self.l[1]"
+    ],
+    "description": "maximum priority queue"
+  },
+  "min priority queue": {
+    "prefix": "minpq",
+    "body": [
+      "class minpq:",
+      "  def __init__(self):",
+      "    self.l = [0]",
+      "    self.len = 0",
+      "",
+      "  def isempty(self):",
+      "    return self.len == 0",
+      "",
+      "  def swap(self,i,j):",
+      "    self.l[i] , self.l[j] = self.l[j] , self.l[i]",
+      "",
+      "  def swim(self,k):",
+      "    while k > 1 and self.l[k] < self.l[k//2]:",
+      "      self.swap(k,k//2)",
+      "      k = k//2",
+      "  ",
+      "  def sink(self,k):",
+      "    while 2*k <= self.len:",
+      "      j = 2*k",
+      "      if j < self.len and self.l[j+1] < self.l[j]:",
+      "        j += 1",
+      "      if self.l[k] > self.l[j]:",
+      "        self.swap(k,j)",
+      "      k = j",
+      "",
+      "  def push(self,val):",
+      "    self.l.append(val)",
+      "    self.len += 1",
+      "    self.swim(self.len)",
+      "",
+      "  def pop(self):",
+      "    if self.len:",
+      "      self.swap(1,self.len)",
+      "      val = self.l.pop()",
+      "      self.len -= 1",
+      "      self.sink(1)",
+      "      return val",
+      "    else:",
+      "      raise",
+      "",
+      "  def top(self):",
+      "    return self.l[1]",
+      ""
+    ],
+    "description": "min priority queue"
+  },
+  "Demux Basic Template": {
+    "prefix": "demux",
+    "body": [
+      "from random import *",
+      "from os import system",
+      "",
+      "",
+      "n_limit = ()",
+      "",
+      "",
+      "",
+      "def create():",
+      "    pass",
+      "",
+      "",
+      "",
+      "for i in range(1, 21):",
+      "",
+      "    with open(f'{i}.in', 'w') as f:",
+      "        f.write(create())",
+      "",
+      "    system(f'python solution.py < {i}.in > {i}.out')",
+      ""
+    ],
+    "description": "Demux Basic Template"
+  },
+  "Custom Probabilty choice": {
+    "prefix": "custom_prob",
+    "body": [
+      "",
+      "def prob_helper():",
+      "",
+      "    global prob",
+      "",
+      "    sm = sum(prob)",
+      "    prob = list(accumulate([i/sm for i in prob]))",
+      "",
+      "",
+      "",
+      "def choose():",
+      "",
+      "    rn = random()",
+      "",
+      "    for i in range(len(prob)):",
+      "        if prob[i] > rn:",
+      "            return commands[i]",
+      "",
+      ""
+    ],
+    "description": "Custom Probabilty choice"
+  },
+}
