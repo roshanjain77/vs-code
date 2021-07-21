@@ -83,8 +83,7 @@
     "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
 },
-  "python.languageServer": "Pylance",
-  "editor.fontFamily": "'monospace', monospace, 'Droid Sans Fallback','MesloLGF NF','Droid Sans Mono'",
+"python.languageServer": "Pylance",
   "code-runner.preserveFocus": false,
 "explorer.confirmDragAndDrop": false,
 "jupyter.sendSelectionToInteractiveWindow": true,
@@ -101,17 +100,13 @@
     "powershell": ".ps1",
     "typescript": ".ts"
 },
-"workbench.editorAssociations": [
-    {
-        "viewType": "jupyter.notebook.ipynb",
-        "filenamePattern": "*.ipynb"
-    }
-],
+"workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+},
 "code-runner.executorMapByGlob": {
 
     "pom.xml": "cd $dir && mvn clean package"
 },
-"window.zoomLevel": 1,
 "C_Cpp.default.cppStandard": "gnu++17",
 "C_Cpp.default.cStandard": "gnu17",
 "cph.general.useShortCodeForcesName": true,
@@ -129,7 +124,16 @@
     "type_traits": "cpp",
     "iosfwd": "cpp"
 },
-"workbench.colorTheme": "Default Dark+",
 "cph.general.timeOut": 20000,
 "kite.showWelcomeNotificationOnStartup": false,
+"window.zoomLevel": 1,
+"json.maxItemsComputed": 15000,
+"python.defaultInterpreterPath": "~/anaconda3/bin/python",
+"editor.fontFamily": "'MesloLGS NF', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+"terminal.integrated.fontFamily": "MesloLGS NF",
+"terminal.integrated.fontSize": 16,
+"notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+},
 }

@@ -12,19 +12,22 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
-    "Demux Basic Template": {
+    "Demux statement template": {
         "prefix": "demux",
         "body": [
           "## Input",
+          "First-line -> an integer, ~n~ -- the length of the array",
           "",
-          "",
+          "Second-line -> ~n~ space-separated integers -- ~A_1, A_2, ..., A_n~",
           "",
           "## Output",
           "An integer",
           "",
           "## Constraints",
           "",
-          "~1 \\leq ~ `S.length` ~\\leq 3.10^4~",
+          "~1 \\leq ~ `n` ~\\leq 5.10^4~",
+          "",
+          "~1 \\leq ~ ~A_i~ ~\\leq 5.10^4~",
           "",
           "",
           "## Example",
@@ -36,6 +39,6 @@
           "```",
           "```"
         ],
-        "description": "Demux Basic Template"
-      }
+        "description": "Demux statement template"
+      },
 }
