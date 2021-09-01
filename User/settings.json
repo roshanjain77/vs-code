@@ -126,7 +126,6 @@
 },
 "cph.general.timeOut": 20000,
 "kite.showWelcomeNotificationOnStartup": false,
-"window.zoomLevel": 1,
 "json.maxItemsComputed": 15000,
 "python.defaultInterpreterPath": "~/anaconda3/bin/python",
 "editor.fontFamily": "'MesloLGS NF', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
@@ -136,4 +135,5 @@
     "default": "right",
     "jupyter-notebook": "left"
 },
+"window.zoomLevel": 1,
 }
