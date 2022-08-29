@@ -31,13 +31,14 @@
   },
   "code-runner.executorMap": {
 
+
     "javascript": "node",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt && rm -fr $fileNameWithoutExt.class",
     "c": "cd $dir && gcc \"$fileName\" -o \"$fileNameWithoutExt\" && time ./\"$fileNameWithoutExt\"",
     "cpp":"cd $dir && g++ -std=gnu++17 \"$fileName\" -o \"$fileNameWithoutExt\" && echo 'Compiled ..' && time ./\"$fileNameWithoutExt\" && echo 'Done ..' && rm -f \"$fileNameWithoutExt\" && cd -",
     "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "php": "php",
-    "python": "cd $dir && time python \"$fileName\" && cd -",
+    "python": "cd $dir && python \"$fileName\" && cd -",
     "html": "xdg-open",
     "perl": "perl",
     "perl6": "perl6",
