@@ -139,4 +139,5 @@
 "editor.inlineSuggest.enabled": true,
 "git.ignoreLegacyWarning": true,
 "window.zoomLevel": 1,
+"terminal.integrated.enableMultiLinePasteWarning": false,
 }
