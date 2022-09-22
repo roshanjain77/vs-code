@@ -19,6 +19,7 @@ Extensions:
 
 Execute the following commands:
 ```
+rm -fr snippets
 ln -s ~/Desktop/vs-code/User/snippets snippets
 ln -s ~/Desktop/vs-code/User/settings.json settings.json
 ln -s ~/Desktop/vs-code/User/keybindings.json keybindings.json
