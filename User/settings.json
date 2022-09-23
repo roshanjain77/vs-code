@@ -16,26 +16,81 @@
     "python.jediEnabled": false,
     "java.semanticHighlighting.enabled": true,
     "terminal.integrated.shell.linux": "/bin/zsh",
+    
     "launch": {
-      "version": "0.2.0",
-      "configurations": [
-          {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "program": "${file}",
-            "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "/usr/local/bin/node"
-          }
-      ]
+        "version": "0.2.0",
+        "configurations": [
+
+            {
+                "name": "C++ (gdb) Launch",
+                "preLaunchTask": "C/C++: g++ build active file",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${fileDirname}/${fileBasenameNoExtension}",
+                "args": [],
+                "stopAtEntry": true,
+                "cwd": "${fileDirname}",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+                ]
+            },
+
+            {
+                "name": "Python: Current File (Integrated Terminal)",
+                "type": "python",
+                "request": "launch",
+                "cwd": "${fileDirname}",
+                "args": [],
+                "program": "${file}",
+                "stopOnEntry": true,
+                "console": "integratedTerminal"
+            },
+            {
+                "name": "C (gdb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${workspaceRoot}/a.out",
+                "cwd": "${workspaceFolder}",
+                "stopAtEntry": true,
+                "MIMode": "gdb",
+            },
+            // {
+            //   "type": "java",
+            //   "name": "CodeLens (Launch) - f",
+            //   "request": "launch",
+            //   "mainClass": "f",
+            //   "projectName": "Desktop_2e3c258d"
+            // },
+            // {
+            //   "type": "java",
+            //   "name": "Java Debug (Launch) - Current File",
+            //   "request": "launch",
+            //   "mainClass": "${file}"
+            // },
+            // {
+            //   "name": "Python: Current File (External Terminal)",
+            //   "type": "python",
+            //   "request": "launch",
+            //   "program": "${file}",
+            //   "console": "externalTerminal"
+            // }
+        ]
   },
+
   "code-runner.executorMap": {
 
 
     "javascript": "node",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt && rm -fr $fileNameWithoutExt.class",
-    "c": "cd $dir && gcc \"$fileName\" -o \"$fileNameWithoutExt\" && time ./\"$fileNameWithoutExt\"",
-    "cpp":"cd $dir && g++ -std=gnu++17 \"$fileName\" -o \"$fileNameWithoutExt\" && echo 'Compiled ..' && time ./\"$fileNameWithoutExt\" && echo 'Done ..' && rm -f \"$fileNameWithoutExt\" && cd -",
+    "c": "cd $dir && gcc \"$fileName\" -o \"$fileNameWithoutExt\" && ./\"$fileNameWithoutExt\"",
+    "cpp":"cd $dir && g++ -std=gnu++17 \"$fileName\" -o \"$fileNameWithoutExt\" && echo 'Compiled ..' && ./\"$fileNameWithoutExt\" && echo 'Done ..' && rm -f \"$fileNameWithoutExt\" && cd -",
     "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "php": "php",
     "python": "cd $dir && python \"$fileName\" && cd -",
@@ -84,8 +139,10 @@
     "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
 },
+
+
 "python.languageServer": "Pylance",
-  "code-runner.preserveFocus": false,
+"code-runner.preserveFocus": false,
 "explorer.confirmDragAndDrop": false,
 "jupyter.sendSelectionToInteractiveWindow": true,
 "jupyter.jupyterServerType": "local",
@@ -140,4 +197,5 @@
 "git.ignoreLegacyWarning": true,
 "window.zoomLevel": 1,
 "terminal.integrated.enableMultiLinePasteWarning": false,
+"security.workspace.trust.untrustedFiles": "open",
 }
