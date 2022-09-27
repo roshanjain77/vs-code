@@ -14,6 +14,51 @@
     ],
     "description": "normal starter"
   },
+
+  "Basic CP template": {
+    "prefix": "basic",
+    "body": [
+      "// competitive programming template",
+      "",
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "#define ll long long",
+      "#define ld long double",
+      "#define pb push_back",
+      "#define mp make_pair",
+      "",
+      "#define all(x) x.begin(), x.end()",
+      "#define rall(x) x.rbegin(), x.rend()",
+      "#define sz(x) (int)x.size()",
+      "",
+      "",
+      "void solve() {",
+      "    // code here",
+      "    ",
+      "}",
+      "",
+      "int main(int argc, char const *argv[]) {",
+      "    ios_base::sync_with_stdio(false);",
+      "    cin.tie(NULL);",
+      "    cout.tie(NULL);",
+      "",
+      "    // get test cases",
+      "    int t = 1;",
+      "    cin >> t;",
+      "",
+      "    while (t--) {",
+      "",
+      "        solve();",
+      "    }",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "Basic CP template"
+  },
+
+  
   "Template for competitive programming": {
     "prefix": "cp",
     "body": [
